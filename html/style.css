@@ -1,0 +1,710 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    background: none !important;
+    overflow: hidden !important;
+    font-family: "Poppins";
+}
+
+:root {
+    --main-font-size: 2vh;  
+}
+
+.container {
+    height: 100vh;
+    opacity: 1.0;
+}
+
+.racing-ui {
+    display: none;
+    position: absolute;
+    width: 25vh;
+    bottom: 1vh;
+    right: 1vh;
+    border-radius: 1vh;
+
+    background-color: rgba(43, 43, 43, 0.5);
+    overflow: hidden;
+    padding: 1vh;
+    color: white;
+}
+
+#race-racename {
+    font-weight: 400;
+    font-size: 1.6em;
+    text-align: center;
+}
+
+.row {
+    position: relative;
+    width: 100%;
+    padding-bottom: 2.5vh;
+}
+
+.left {
+    float:left;
+    text-align: left;
+    width: fit-content;
+    max-width: 50%;
+    padding-right: 1vh;
+    text-transform: uppercase;
+}
+
+.right {
+    float:left;
+    text-align: left;
+    width: 12%;
+    text-transform: none;
+}  
+
+.creator-ui {
+    display: none;
+    position: absolute;
+    width: 30vh;
+    bottom: 1vh;
+    right: 1vh;
+    border-radius: 1vh;
+
+    background-color: rgba(43, 43, 43, 0.5);
+    overflow: hidden;
+    padding: 1vh;
+    color: white;
+}
+
+#editor-racename {
+    font-weight: 400;
+    font-size: 1.6em;
+    text-align: center;
+}
+
+.editor-left {
+    float:left;
+    text-align: left;
+    padding-right: 1vh;
+    text-transform: uppercase;
+}
+
+.editor-right {
+    float:right;
+    text-align: right;
+    padding-right: 1vh;
+} 
+
+.btn {
+    font-size: 1em;
+}
+
+.tablet-container{
+    position: relative;
+    top: 15vh;
+    left: 25vh;
+}
+
+.tablet {
+    display: none;
+    height: 70vh;
+    width: 130vh;
+    border: 1vh;
+    border-radius: 1vh;
+    border-color: black;
+    border-style: inset;
+    background: url("images/bg.png");
+    background-size: 100%;
+    font-family: "Poppins";
+}
+
+.button-container {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.icon-container {
+    max-width: 8vh;
+    padding: 2vh;
+    text-align: center;
+}
+
+.icon-container:hover .icon-text{
+    cursor: default;
+}
+
+.icon-text {
+    color: rgb(255, 255, 255);
+}
+
+.fa-file-signature, .fa-chart-column, .fa-car-on, .fa-person-walking-luggage, .fa-gauge-high {
+    height: 6vh;
+    width: 6vh;
+    color: white;
+}
+
+.fa-file-signature:hover, .fa-chart-column:hover, .fa-car-on:hover, .fa-person-walking-luggage:hover, .fa-gauge-high:hover {
+    color: rgba(161, 161, 161);
+    cursor: pointer;
+}
+
+.tablet-top-bar {
+    background-color: rgba(161, 161, 161, 0.3);
+    position: relative;
+    height: 2vh;
+    top: 1px;
+    width: 100%;
+    border-radius: 0.3vh;
+}
+
+.tablet-top-bar:hover {
+    cursor:default;
+}
+
+.fa-wifi {
+    position: absolute;
+    left: 93%;
+    bottom: 0.3vh;
+}
+
+.top-bar-text {
+    float:left;
+    text-align: left;
+    position: absolute;
+    left: 95%;
+    font-family: "Poppins";
+}
+
+.fa-power-off {
+    position: absolute;
+    left: 1%;
+    width: 2vh;
+    height: 2vh;
+    color: white;
+}
+
+.fa-power-off:hover {
+    color: red;
+    cursor: pointer;
+}
+
+.power-off-text {
+    float:left;
+    text-align: left;
+    position: absolute;
+    left: 3%;
+    font-family: "Poppins";
+}
+
+.top-bar-profile {
+    position: absolute;
+    left: 10vh;
+}
+
+.input-racer-name {
+    display: none;
+    position: absolute;
+    left: 47vh;
+    top: 6vh;
+    height: 5vh;
+    width: 20vh;
+    background-color: transparent;
+}
+
+#racer-name-input {
+    outline-width: 0;
+    background-color: rgba(161, 161, 161, 0.3);
+    border: none;
+    border-radius: 1vh;
+    height:4vh;
+    font-size:xx-large;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+#racer-name-input::placeholder {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.fa-thumbs-up {
+    height: 3vh;
+    width: 3vh;
+    padding: 1vh;
+    color: white;
+}
+
+.fa-thumbs-up:hover {
+    color: rgb(49, 226, 33);
+    cursor: pointer;
+}
+
+.races-list {
+    display: none;
+    background-color: rgb(19, 19, 19);
+    position: absolute;
+    border: 1vh;
+    border-radius: 1vh;
+    border-style: inset;
+    border-width: 0.2vh;
+    border-color: black;
+    top: 4vh;    
+    left: 90vh;
+    width: 40vh;
+    height: 65vh;
+    overflow: scroll;
+}
+
+.races-list::-webkit-scrollbar {
+    display: none;
+}
+
+.active-races-list {
+    display: none;
+    background-color: rgb(19, 19, 19);
+    position: absolute;
+    border: 1vh;
+    border-radius: 1vh;
+    border-style: inset;
+    border-width: 0.2vh;
+    border-color: black;
+    top: 4vh;    
+    left: 90vh;
+    width: 40vh;
+    height: 65vh;
+    overflow: scroll;
+}
+
+.active-races-list::-webkit-scrollbar {
+    display: none;
+}
+
+.race-content {
+    padding: 0.1vh;
+}
+
+#race-style {
+    letter-spacing: 0.4px;
+    font-size: 0.75rem;
+    font-weight: 300;
+    padding:5px 5px 4px 5px;
+    margin-right:5px;
+    float: left;
+}
+
+.race-container {
+    overflow: hidden;
+    position: relative;
+    margin-top: 0.5vh;
+    padding: 0.45rem;
+    display: flex;
+    left:1%;
+    width: 95%;
+    flex-direction: column;
+    background-color: rgba(37, 39, 51, 0.65);
+    border-radius: 0.5vh;
+}
+
+.race-container:hover {
+    background-color: rgba(161, 161, 161);
+    cursor: pointer;
+}
+
+.race-options-inputs{
+    overflow: hidden;
+    position: relative;
+    margin: 0.5vh;
+    padding: 0.15rem;
+    background-color: rgba(37, 39, 51, 0.65);
+    border-radius: 1vh;
+}
+
+.races-start-menu {
+    display: none;
+    background-color: rgb(19, 19, 19);
+    position: absolute;
+    border: 1vh;
+    border-radius: 1vh;
+    border-style: inset;
+    border-width: 0.2vh;
+    border-color: black;
+    top: 4vh;    
+    left: 90vh;
+    width: 40vh;
+    height: 65vh;
+    overflow: scroll;
+}
+
+.races-start-menu::-webkit-scrollbar {
+    display: none;
+}
+
+#race-options-laps-input, #race-options-type-input, #race-options-penality-input, #race-options-startDelay-input {
+    outline-width: 0;
+    background-color: rgba(161, 161, 161, 0.3);
+    border: none;
+    border-radius: 1vh;
+    height:2vh;
+    font-size:larger;
+}
+
+#race-options-phasing-checkbox {
+    outline-width: 0;
+    background-color: rgba(161, 161, 161, 0.3);
+    border: none;
+    border-radius: 1vh;
+    height:1vh;
+}
+
+.race-options-start {
+    overflow: hidden;
+    position: relative;
+    margin: 0.5vh;
+    padding: 0.15rem;
+    background-color: rgba(37, 39, 51, 0.65);
+    border-radius: 1vh;
+    text-align:center;
+}
+
+.race-options-start:hover {
+    background-color: rgba(161, 161, 161);
+    cursor: pointer;
+}
+
+.creator-name {
+    display: none;
+    top: 40%;
+    left: 50vh;
+    position: absolute;
+    height: 5vh;
+    width: 20vh;
+}
+
+#creator-name-label {
+    height:4vh;
+    font-size:x-large;
+    color: gray;
+}
+
+#creator-name-input {
+    outline-width: 0;
+    background-color: rgba(161, 161, 161, 0.3);
+    border: none;
+    border-radius: 1vh;
+    height:4vh;
+    font-size:xx-large;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+#creator-name-input::placeholder {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.races-main-menu {
+    display: none;
+    background-color: rgb(19, 19, 19);
+    position: absolute;
+    border: 1vh;
+    border-radius: 1vh;
+    border-style: inset;
+    border-width: 0.2vh;
+    border-color: black;
+    top: 4vh;    
+    left: 90vh;
+    width: 40vh;
+    height: 65vh;
+    overflow: scroll;
+}
+
+.races-main-menu::-webkit-scrollbar {
+    display: none;
+}
+
+.app-boost {
+    position: absolute;
+    top: 4vh;
+    left: 1.6vh;
+    margin: 0 auto;
+    height: 66vh;
+    width: 128vh;
+    background-color: rgb(19, 19, 19);
+    border: inset;
+    border-width: 0.4vh;
+    border-color: rgba(161, 161, 161, 0.3);
+    display: none;
+}
+
+.app-boost-container {
+    margin-left: 1.5vh;
+    margin-top: 10vh;
+    height: 40vh;
+    width: 124.5vh;
+
+    display: flex;
+    flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+}
+
+.app-boost-info {
+    overflow: hidden;
+    position: relative;
+    margin: 0.5vh;
+    padding: 0.45rem;
+    flex-direction: column;
+    background-color: rgba(37, 39, 51, 0.65);
+    border-radius: 0.5vh;
+    text-align: center;
+}
+
+.app-boost-info-container {
+    overflow: hidden;
+    position: relative;
+    margin: 0.5vh;
+    padding: 0.45rem;
+    flex-direction: column;
+    background-color: rgba(37, 39, 51, 0.65);
+    border-radius: 0.5vh;
+    text-align: center;
+}
+
+.app-boost-info-container:hover {
+    cursor: pointer;
+    border: inset;
+    border-width: 0.4vh;
+    border-color: rgba(161, 161, 161, 0.3);
+}
+
+.app-boost-huge-letter {
+    font-size: 5vh;
+    font-weight: 1000;
+}
+
+.app-boost-clicked-boost {
+    border: inset;
+    border-width: 0.4vh;
+    border-color: rgba(161, 161, 161, 0.3);
+}
+
+.fa-right-from-bracket {
+    position: absolute;
+    bottom: 1%;
+    right: 1%;
+    font-size: 5vh;
+    font-weight: 1000;
+}
+
+.fa-right-from-bracket:hover {
+    cursor: pointer;
+    color: red;
+} 
+
+.app-boost-confirm-container {
+    display: none;
+    position: absolute;
+    width: 45vh;
+    height: 7vh;
+    bottom: 5vh;
+    left: 40vh;
+}
+
+.app-boost-confirm-boost {
+    position: absolute;
+    right: 1vh;
+    top:1vh;
+    font-size: 5vh;
+    font-weight: 1000; 
+}
+
+.app-boost-confirm-scratch {
+    position: absolute;
+    left: 1vh;
+    top:1vh;
+    font-size: 5vh;
+    font-weight: 1000; 
+}
+
+.app-boost-confirm-scratch:hover, .app-boost-confirm-boost:hover {
+    cursor: pointer;
+    color: rgb(37, 39, 51, 0.65);
+}
+
+.app-boost-refresh-container {
+    position: absolute;
+    top: 1%;
+    right: 1%;
+    width: fit-content;
+    height: 6vh;
+    display: flex;
+    flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+    text-align: right;
+}
+
+.app-boost-refresh-container:hover {
+    cursor: pointer;
+    border-radius: 0.5vh;
+    border-color: rgb(37, 39, 51, 0.65);
+    border-style: inset;
+    border-width: 0.5vh;
+}
+
+.app-boost-refresh-container:hover .fa-arrows-rotate {
+    color: green;
+}
+
+.fa-arrows-rotate {
+    padding: 1vh;
+    font-size: 5vh;
+    font-weight: 1000;
+}
+
+.app-boost-refresh-text {
+    text-align: left;
+    font-size: 3vh;
+    font-weight: 600;
+}
+
+.app-boost-gps-container {
+    position: absolute;
+    top: 1%;
+    left: 1%;
+    width: fit-content;
+    height: 6vh;
+    display: flex;
+    flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+}
+
+.app-boost-gps-container:hover {
+    cursor: pointer;
+    border-radius: 0.5vh;
+    border-color: rgb(37, 39, 51, 0.65);
+    border-style: inset;
+    border-width: 0.5vh;
+}
+
+.app-boost-gps-container:hover .fa-map-location{
+    color: green;
+}
+
+.fa-map-location {
+    padding: 1vh;
+    font-size: 5vh;
+    font-weight: 1000;
+}
+
+.app-boost-gps-text {
+    text-align: left;
+    font-size: 3vh;
+    font-weight: 600;
+}
+
+.hacking-container {
+    opacity: 0;
+    position: absolute;
+    width: 70vh;
+    height: 80vh;
+    left: 55vh;
+    top: 5vh;
+    color: white;
+    background-color: rgb(19, 19, 19);
+    border: inset;
+    border-width: 0.4vh;
+    border-color: rgba(161, 161, 161, 0.3);
+    display: none;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+}
+
+.hacking-combinaison-container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+    color: white;
+    width: 80%;
+    height: 60%;
+    border: inset;
+    border-width: 0.4vh;
+    border-color: rgba(161, 161, 161, 0.3);
+    overflow: hidden;
+}
+
+.hacking-combinaison {
+    width: fit-content;
+    font-size: 3vh; 
+    font-weight: 400;
+    padding: 0.4vh;
+}
+
+.hacking-combinaison:hover {
+    color: red;
+    cursor: pointer;
+}
+
+.fa-xmark {
+    position: absolute;
+    left: 1%;
+    top: 1%;
+    font-size: 3vh; 
+    font-weight: 400;
+}
+
+.fa-xmark:hover {
+    color: red;
+    cursor: pointer;
+}
+
+.app-wanted {
+    position: absolute;
+    top: 4vh;
+    left: 1.6vh;
+    margin: 0 auto;
+    height: 66vh;
+    width: 128vh;
+    background-color: rgb(19, 19, 19);
+    border: inset;
+    border-width: 0.4vh;
+    border-color: rgba(161, 161, 161, 0.3);
+    display: none;
+}
+
+.app-wanted-container {
+    margin-left: 1.5vh;
+    margin-top: 10vh;
+    height: 40vh;
+    width: 124.5vh;
+
+    display: flex;
+    flex-wrap: wrap;
+	justify-content: space-around;
+	align-items: center;
+	align-content: center;
+}
+
+.app-wanted-info {
+    overflow: hidden;
+    position: relative;
+    margin: 0.5vh;
+    padding: 0.45rem;
+    flex-direction: column;
+    background-color: rgba(37, 39, 51, 0.65);
+    border-radius: 0.5vh;
+    text-align: center;
+}
+
+.app-wanted-info:hover {
+    cursor: pointer;
+    border: inset;
+    border-width: 0.4vh;
+    margin: 0vh;
+    border-color: rgba(161, 161, 161, 0.3);
+}

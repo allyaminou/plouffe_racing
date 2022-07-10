@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses de rue</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/js/all.min.js" integrity="sha512-6PM0qYu5KExuNcKt5bURAoT6KCThUmHRewN3zUFNaoI6Di7XJPTMoT6K0nsagZKk2OB4L7E3q1uQKHNHd4stIQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+    <body>
+        <div class="container">
+            <div id="creator-ui" class="creator-ui">
+                <div class="row">
+                    <div class="header" id="editor-racename">Penis</div>
+                </div>
+                <div class="row">
+                    <div class="editor-left">Checkpoints</div>
+                    <div class="editor-right" id="editor-checkpoints">7/8</div>
+                </div>
+                <div class="row">
+                    <div class="editor-left">Distance des pneus <button class="btn btn-xs btn-success"><</button><button class="btn btn-xs btn-danger">></button></div>
+                    <div class="editor-right" id="editor-tiredistance">5.0</div>
+                </div>
+                <div class="row">
+                    <div class="editor-left">Ajouter un checkpoint</div>
+                    <div class="editor-right" id="editor-add"><button class="btn btn-xs btn-success">9</button></div>
+                </div>
+                <div class="row">
+                    <div class="editor-left">Effacer un checkpoint</div>
+                    <div class="editor-right" id="editor-delete"><button class="btn btn-xs btn-success">8</button></div>
+                </div>
+                <div class="row">
+                    <div class="editor-left">Fermer l'éditeur</div>
+                    <div class="editor-right" id="editor-cancel"><button class="btn btn-xs btn-success">7</button></div>
+                </div>
+                <div class="row">
+                    <div class="editor-left">Enregistrer</div>
+                    <div class="editor-right" id="editor-save"><button class="btn btn-xs btn-success">K</button></div>
+                </div>
+            </div>
+
+            <div id="racing-ui" class="racing-ui">
+                <div class="row">
+                    <div class="header" id="race-racename">Penis</div>
+                </div>
+                <div class="row">
+                    <div class="left">Position :</div>
+                    <div class="right" id="race-position">1/1</div>
+                </div>
+                <div class="row">
+                    <div class="left">Checkpoints :</div>
+                    <div class="right" id="race-checkpoints">1/1</div>
+                </div>
+                <div class="row">
+                    <div class="left">Tours :</div>
+                    <div class="right" id="race-lap">1/1</div>
+                </div>
+                <div class="row">
+                    <div class="left">Tour actuel :</div>
+                    <div class="right" id="race-time">7</div>
+                </div>
+                <div class="row">
+                    <div class="left">Meilleur tour :</div>
+                    <div class="right" id="race-besttime">8</div>
+                </div>
+                <div class="row">
+                    <div class="left">Temps total :</div>
+                    <div class="right" id="race-totaltime">9</div>
+                </div>
+            </div>
+
+            <div id="tablet-container" class="tablet-container">
+                <div id="tablet" class="tablet">
+                    <div class="tablet-top-bar">
+                        <div class="fa-solid fa-power-off" onclick="Close()"></div>
+                        <div class="power-off-text">Fermer</div>
+                        <div class="fa-solid fa-wifi"></div>
+                        <div class="top-bar-text">PogWifi</div>
+                        <div id="top-bar-profile" class="top-bar-text top-bar-profile"> <b>Nom:</b> Inconnue <b>Rp:</b> 0 </div>
+                    </div>
+
+                    <div id="input-racer-name" class="input-racer-name">
+                        <input id="racer-name-input" type="text" placeholder="Nom de courseur">
+                        <span class="fa-solid fa-thumbs-up" onclick="ConfirmRacerName()"></span>
+                    </div>
+
+                    <div id="button-container" class="button-container">
+                        <div id="button-profile" class='icon-container'>
+                            <span class='fa-solid fa-file-signature' onclick="OnProfile()"></span>
+                            <span class='icon-text'>Profile</span>
+                        </div>
+        
+                        <div id="button-prize" class='icon-container'>
+                            <span class="fa-solid fa-chart-column" onclick="ShowWantedList()"></span>
+                            <span class='icon-text'>Véhicules rechercher</span>
+                        </div>
+        
+                        <div id="button-boost" class='icon-container'>
+                            <span class="fa-solid fa-car-on" onclick="OnBoost()"></span>
+                            <span class='icon-text'>Boost</span>
+                        </div>
+        
+                        <div id="button-race" class='icon-container'>
+                            <span class="fa-solid fa-gauge-high" onclick="OnRaceMenu()"></span>
+                            <span class='icon-text'>Courses</span>
+                        </div>
+                    </div>
+
+                    <div id="app-wanted" class="app-wanted">
+                        <div id="app-wanted-container" class="app-wanted-container"> 
+                        
+                        </div>
+                        <div class="fa-solid fa-right-from-bracket" onclick="CloseWanted()"></div>
+                    </div>
+
+                    <div id="app-boost" class="app-boost">
+                        <div id="app-boost-container" class="app-boost-container">
+                            <div id="app-boost-gps-container" class="app-boost-gps-container" onclick="SetBoostGps()">
+                                <i class="fa-solid fa-map-location"></i>
+                                <div class="app-boost-gps-text">Obtenir la position</div>
+                            </div>
+
+                            <div id="app-boost-refresh-container" class="app-boost-refresh-container" onclick="RefreshBoostList()">
+                                <div id="app-boost-refresh-text"class="app-boost-refresh-text">Rafraishir</div>
+                                <i class="fa-solid fa-arrows-rotate"></i>
+                            </div>
+
+                            <div class="fa-solid fa-right-from-bracket" onclick="CloseBoost()"></div>
+
+                            <div id="app-boost-confirm-container" class="app-boost-confirm-container">
+                                <div id="app-boost-confirm-boost" class="app-boost-confirm-boost" onclick="StartBoost()">Boost</div>
+                                <div id="app-boost-confirm-scratch" class="app-boost-confirm-scratch" onclick="StartScratch()">Scratch</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="creator-name" class="creator-name">
+                        <input id="creator-name-input" type="text" name="creator-name-input" placeholder="Nom de la course">
+                        <span class="fa-solid fa-thumbs-up" onclick="OpenCreator()"></span>
+                    </div>
+
+                    <div id="races-main-menu" class="races-main-menu">
+                        <div id="races-main-menu-creator" class="race-options-start" onclick="OnRace()">Démarer une course</div>
+                        <div id="races-main-menu-creator" class="race-options-start" onclick="OnCreator()">Crée une course</div>
+                        <div id="races-main-menu-creator" class="race-options-start" onclick="OnJoinRace()">Rejoindre une course</div>
+                        <div id="races-main-menu-creator" class="race-options-start" onclick="OnLeaveRace()">Quitter votre course</div>
+                        <div id="races-main-menu-creator" class="race-options-start" onclick="showOrHide('.racing-ui', 1000)">Montrer / Cacher le UI</div>
+                    </div>
+                    
+                    <div id="active-races-list" class="active-races-list"></div>
+                    <div id="races-list" class="races-list"></div>
+
+                    <div id="races-start-menu" class="races-start-menu">
+                        <div id="race-options-laps" class="race-options-inputs">
+                            <label for="race-options-laps-input">Laps: </label><br>
+                            <input id="race-options-laps-input" type="text" name="race-options-laps-input" placeholder="1,2,3,4,5...">
+                        </div>
+
+                        <div id="race-options-type" class="race-options-inputs">
+                            <label for="race-options-type-input">Type: </label><br>
+                            <input id="race-options-type-input" type="text" name="race-options-type-input" placeholder="Laps, Sprint, Drift">
+                        </div>
+
+                        <div id="race-options-penality" class="race-options-inputs">
+                            <label for="race-options-penality-input">Penalité: </label><br>
+                            <input id="race-options-penality-input" type="text" name="race-options-penality-input" placeholder="1,2... secondes">
+                        </div>
+
+                        <div id="race-options-startDelay" class="race-options-inputs">
+                            <label for="race-options-startDelay-input">Delai de départ: </label><br>
+                            <input id="race-options-startDelay-input" type="text" name="race-options-startDelay-input" placeholder="5,10... secondes">
+                        </div>
+
+                        <div id="race-options-phasing" class="race-options-inputs">
+                            <label for="race-options-phasing-checkbox">Phasing (Désactive les collisions entre courseurs)</label><br>
+                            <input type="checkbox" id="race-options-phasing-checkbox" name="race-options-phasing-checkbox" value="Bike">
+                        </div>
+
+                        <div id="race-options-start" class="race-options-start" onclick="StartRace()">Lancer la course</div>
+                        <div id="race-options-goback" class="race-options-start" onclick="RacingGoBack()">Retour</div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="hacking-container" class="hacking-container">
+                <i class="fa-solid fa-xmark" onclick="CloseMiniGame()"></i>
+                <i class="fa-solid fa-user-secret" style="font-size: 8vh; font-weight: 1000;"></i>
+                <i style="font-size: 2vh; font-weight: 300;"> Connection en cours...</i>
+                <i style="font-size: 2vh; font-weight: 300;"> Trouver le code</i>
+                <i id="hacking-solution" style="font-size: 4vh; font-weight: 500;">SXNT THJENX EKHD</i>
+                <i id="hacking-timer" style="font-size: 2vh; font-weight: 300; color:green;">12:32</i>
+                <div id="hacking-combinaison-container" class="hacking-combinaison-container"></div>
+            </div>
+        </div>
+    </body>
+    <script src="./script.js"></script>
+</html>

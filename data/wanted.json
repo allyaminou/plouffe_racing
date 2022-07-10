@@ -1,0 +1,337 @@
+[
+    {
+        "model": "blista",
+        "value": 5,
+        "label": "Blista"
+    },
+    {
+        "model": "issi2",
+        "value": 7,
+        "label": "Issi"
+    },
+    {
+        "model": "panto",
+        "value": 3,
+        "label": "Panto"
+    },
+    {
+        "model": "prairie",
+        "value": 7,
+        "label": "Prairie"
+    },
+    {
+        "model": "exemplar",
+        "value": 1,
+        "label": "Exemplar"
+    },
+    {
+        "model": "cogcabrio",
+        "value": 6,
+        "label": "Cognoscenti Cabrio"
+    },
+    {
+        "model": "f620",
+        "value": 7,
+        "label": "F620"
+    },
+    {
+        "model": "oracle",
+        "value": 7,
+        "label": "Oracle XS"
+    },
+    {
+        "model": "oracle2",
+        "value": 5,
+        "label": "Oracle"
+    },
+    {
+        "model": "zion",
+        "value": 6,
+        "label": "Zion"
+    },
+    {
+        "model": "zion2",
+        "value": 3,
+        "label": "Zion Cabrio"
+    },
+    {
+        "model": "buccaneer",
+        "value": 7,
+        "label": "Buccaneer"
+    },
+    {
+        "model": "dominator",
+        "value": 4,
+        "label": "Dominator"
+    },
+    {
+        "model": "gauntlet",
+        "value": 5,
+        "label": "Gauntlet"
+    },
+    {
+        "model": "picador",
+        "value": 7,
+        "label": "Picador"
+    },
+    {
+        "model": "sabregt",
+        "value": 5,
+        "label": "Sabre Turbo"
+    },
+    {
+        "model": "stalion",
+        "value": 2,
+        "label": "Stallion"
+    },
+    {
+        "model": "vigero",
+        "value": 5,
+        "label": "Vigero"
+    },
+    {
+        "model": "sandking",
+        "value": 3,
+        "label": "Sandking XL"
+    },
+    {
+        "model": "sandking2",
+        "value": 5,
+        "label": "Sandking SWB"
+    },
+    {
+        "model": "baller",
+        "value": 6,
+        "label": "Baller"
+    },
+    {
+        "model": "baller2",
+        "value": 5,
+        "label": "Baller"
+    },
+    {
+        "model": "cavalcade",
+        "value": 7,
+        "label": "Cavalcade"
+    },
+    {
+        "model": "fq2",
+        "value": 7,
+        "label": "FQ 2"
+    },
+    {
+        "model": "granger",
+        "value": 3,
+        "label": "Granger"
+    },
+    {
+        "model": "habanero",
+        "value": 7,
+        "label": "Habanero"
+    },
+    {
+        "model": "huntley",
+        "value": 7,
+        "label": "Huntley S"
+    },
+    {
+        "model": "landstalker",
+        "value": 3,
+        "label": "Landstalker"
+    },
+    {
+        "model": "patriot",
+        "value": 7,
+        "label": "Patriot"
+    },
+    {
+        "model": "radi",
+        "value": 3,
+        "label": "Radius"
+    },
+    {
+        "model": "rocoto",
+        "value": 6,
+        "label": "Rocoto"
+    },
+    {
+        "model": "seminole",
+        "value": 4,
+        "label": "Seminole"
+    },
+    {
+        "model": "serrano",
+        "value": 7,
+        "label": "Serrano"
+    },
+    {
+        "model": "asea",
+        "value": 3,
+        "label": "Asea"
+    },
+    {
+        "model": "asterope",
+        "value": 6,
+        "label": "Asterope"
+    },
+    {
+        "model": "emperor",
+        "value": 4,
+        "label": "Emperor"
+    },
+    {
+        "model": "emperor2",
+        "value": 5,
+        "label": "Emperor rouiller"
+    },
+    {
+        "model": "fugitive",
+        "value": 7,
+        "label": "Fugitive"
+    },
+    {
+        "model": "ingot",
+        "value": 1,
+        "label": "Ingot"
+    },
+    {
+        "model": "intruder",
+        "value": 1,
+        "label": "Intruder"
+    },
+    {
+        "model": "premier",
+        "value": 4,
+        "label": "Premier"
+    },
+    {
+        "model": "primo",
+        "value": 2,
+        "label": "Primo"
+    },
+    {
+        "model": "romero",
+        "value": 1,
+        "label": "Romero Hearse"
+    },
+    {
+        "model": "stretch",
+        "value": 7,
+        "label": "Stretch"
+    },
+    {
+        "model": "superd",
+        "value": 5,
+        "label": "Super Diamond"
+    },
+    {
+        "model": "washington",
+        "value": 3,
+        "label": "Washington"
+    },
+    {
+        "model": "banshee",
+        "value": 4,
+        "label": "Banshee"
+    },
+    {
+        "model": "blista2",
+        "value": 5,
+        "label": "Blista Compact"
+    },
+    {
+        "model": "buffalo",
+        "value": 3,
+        "label": "Buffalo"
+    },
+    {
+        "model": "carbonizzare",
+        "value": 3,
+        "label": "Carbonizzare"
+    },
+    {
+        "model": "comet2",
+        "value": 6,
+        "label": "Comet"
+    },
+    {
+        "model": "coquette",
+        "value": 3,
+        "label": "Coquette"
+    },
+    {
+        "model": "massacro",
+        "value": 7,
+        "label": "Massacro"
+    },
+    {
+        "model": "ninef",
+        "value": 2,
+        "label": "9F"
+    },
+    {
+        "model": "penumbra",
+        "value": 3,
+        "label": "Penumbra"
+    },
+    {
+        "model": "rapidgt",
+        "value": 7,
+        "label": "Rapid GT"
+    },
+    {
+        "model": "rapidgt2",
+        "value": 2,
+        "label": "Rapid GT Cabrio"
+    },
+    {
+        "model": "surano",
+        "value": 3,
+        "label": "Surano"
+    },
+    {
+        "model": "tornado",
+        "value": 3,
+        "label": "Tornado Hard Top"
+    },
+    {
+        "model": "tornado2",
+        "value": 6,
+        "label": "Tornado Cabrio"
+    },
+    {
+        "model": "tornado3",
+        "value": 5,
+        "label": "Tornado Rouiller"
+    },
+    {
+        "model": "infernus",
+        "value": 3,
+        "label": "Infernus"
+    },
+    {
+        "model": "zentorno",
+        "value": 5,
+        "label": "Zentorno"
+    },
+    {
+        "model": "sadler",
+        "value": 6,
+        "label": "Sadler"
+    },
+    {
+        "model": "bison3",
+        "value": 3,
+        "label": "Bison"
+    },
+    {
+        "model": "bobcatxl",
+        "value": 3,
+        "label": "Bobcat XL"
+    },
+    {
+        "model": "minivan",
+        "value": 3,
+        "label": "Minivan"
+    }
+]

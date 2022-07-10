@@ -1,0 +1,15 @@
+CreateThread(Races.Start)
+
+AddEventHandler("plouffe_lib:removeUnique", Races.RemoveUnique)
+AddEventHandler("plouffe_lib:onUnique", Races.OnUnique)
+
+RegisterNetEvent("plouffe_racing:sendConfig", Races.Load)
+RegisterNetEvent("plouffe_racing:saveRace", Races.SaveNewRace)
+RegisterNetEvent("plouffe_racing:startRace", Races.StartRace)
+RegisterNetEvent("plouffe_racing:checkpoint", Races.CheckPoint)
+RegisterNetEvent("plouffe_racing:leaverace", Races.Leave)
+RegisterNetEvent("plouffe_racing:raceFinished", Races.PlayerFinished)
+RegisterNetEvent("plouffe_racing:finishedHacking", Races.FinishedHacking)
+RegisterNetEvent("plouffe_racing:finishedScratching", Boosts.FinishedScratching)
+RegisterNetEvent("plouffe_racing:returnWantedVehicle", Boosts.ReturnWantedVehicle)
+RegisterNetEvent("plouffe_racing:OnHackingTool", Races.OnHackingTool)
